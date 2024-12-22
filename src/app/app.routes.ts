@@ -17,80 +17,90 @@ import { BuyerHomeComponent } from './buyer/buyer-home/buyer-home.component';
 import { BuyerProfileComponent } from './buyer/buyer-profile/buyer-profile.component';
 import { BuyerContactComponent } from './buyer/buyer-contact/buyer-contact.component';
 import { BuyerPasswordComponent } from './buyer/buyer-password/buyer-password.component';
+import { FarmerPasswordComponent } from './farmer/farmer-password/farmer-password.component';
 
 export const routes: Routes = [
-    // {
-    //     path:'',redirectTo:'register' , pathMatch:'full'
-    // },
-    {
-        path:'',
-        component:WelcomeComponent
-    },
-    {
-        path:'login' , component:LoginComponent
-    },
-    {
-       path:'register' , 
-       component:RegisterComponent
-    },
-    {
-        path:'farmer' ,
-         component:FarmerRegistrationComponent
-    },
-    {
-        path:'buyer',
-        component:BuyerRegistrationComponent
-    },
-    {
-        path:'home',
-        component:HomeComponent
-    },
-    {
-        path:'post',
-        component:PostComponent
-    },
-    {
-        path:'about',
-        component:AboutComponent
-    },
-    {
-        path:'profile',
-        component:ProfileComponent
-    },
-    {
-        path:'contact',
-        component:ContactComponent
-    },
-    {
-        path:'farmerlogin',
-        component:FarmerloginComponent
-    },
-    {
-        path:'buyerlogin',
-        component:BuyerloginComponent
-    },
-    {
-        path:'welcome',
-        component:WelcomeComponent
-    },
-    {
-        path:'home-navbar',
-        component:HomeNavbarComponent
-    },{
-        path:'login-navbar',
-        component:LoginNavbarComponent
-    },{
-        path:'buyer-home',
-        component:BuyerHomeComponent
-    },{
-        path:'buyer-profile',
-        component:BuyerProfileComponent
-    },{
-        path:'buyer-contact',
-        component:BuyerContactComponent
-    },{
-        path:'buyer-password',
-        component:BuyerPasswordComponent
-    }
-   
+  // {
+  //     path:'',redirectTo:'register' , pathMatch:'full'
+  // },
+  {
+    path: '',
+    component: WelcomeComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+  },
+  {
+    path: 'farmer',
+    component: FarmerRegistrationComponent,
+  },
+  {
+    path: 'buyer',
+    component: BuyerRegistrationComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'post',
+    component: PostComponent,
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
+  {
+    path: 'farmer-password',
+    component: FarmerPasswordComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
+  {
+    path: 'farmerlogin',
+    component: FarmerloginComponent,
+  },
+  {
+    path: 'buyerlogin',
+    component: BuyerloginComponent,
+  },
+  {
+    path: 'welcome',
+    component: WelcomeComponent,
+  },
+  {
+    path: 'home-navbar',
+    component: HomeNavbarComponent,
+  },
+  {
+    path: 'login-navbar',
+    component: LoginNavbarComponent,
+  },
+  {
+    path: 'buyer-home',
+    component: BuyerHomeComponent,
+  },
+  {
+    path: 'buyer-profile',
+    component: BuyerProfileComponent,
+  },
+  {
+    path: 'buyer-contact',
+    component: BuyerContactComponent,
+  },
+  {
+    path: 'buyer-password',
+    component: BuyerPasswordComponent,
+  },
 ];

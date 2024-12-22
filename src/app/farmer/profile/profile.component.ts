@@ -4,9 +4,10 @@ import { LoginNavbarComponent } from "../login-navbar/login-navbar.component";
 
 @Component({
   selector: 'app-profile',
-  imports: [LoginNavbarComponent],
+  standalone: true, 
+  imports: [RouterLink, LoginNavbarComponent],
   templateUrl: './profile.component.html',
-  styleUrl: './profile.component.scss'
+  styleUrls: ['./profile.component.scss'] 
 })
 export class ProfileComponent {
 

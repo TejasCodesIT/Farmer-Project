@@ -1,63 +1,62 @@
 <app-login-navbar></app-login-navbar>
-    <div class="container">
-        <div class="profile">
-            
-            <h2>
-               FARMER DETAILS
-            </h2>
-        </div>
-        <div class="form-group">
-            <input placeholder="Username" type="text" />
-        </div>
-        <div class="form-group">
-            <input placeholder="Email" type="email" />
-        </div>
-        <div class="form-group">
-            <input placeholder="Phone No" type="text" />
-        </div>
-        <div class="form-group">
-            <input placeholder="Place" type="text" />
-        </div>
-        <div class="buttons">
-            <button>
-                Edit Profile
+<div class="container">
+    <div class="profile">
+
+        <h2>
+            FARMER DETAILS
+        </h2>
+    </div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input placeholder="" type="text" />
+    </div>
+    <div class="form-group">
+        <label for="username">Email</label>
+        <input placeholder="" type="email" />
+    </div>
+    <div class="form-group">
+        <label for="username">Phone No</label>
+        <input placeholder="" type="text" />
+    </div>
+    <div class="form-group">
+        <label for="username">Place</label>
+        <input placeholder="" type="text" />
+    </div>
+    <div class="buttons">
+        <button>Edit Profile</button>
+        <button>Add a Post</button>
+        <button routerLink="/farmer-password">Change Password</button>
+    </div>
+
+    <div class="post">
+
+        <img alt="Image of various fruits" height="100"
+            src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"
+            width="150" />
+        <div class="details">
+            <label for="username">Username</label>
+            <input id="username" type="text" />
+
+            <label for="quantity">Quantity</label>
+            <input id="quantity" type="text" />
+
+            <label for="price">Price</label>
+            <input id="price" type="text" />
+
+            <label for="desciption">Description</label>
+            <input id="desciption" type="text" />
+
+            <button class="btn">
+                Delete
             </button>
-            <button>
-                Add a Post
+            <br>
+            <button class="btn">
+                Edit
             </button>
-            
-            <button>
-                Change Password
-            </button>
-        </div>
-    
-        <div class="post">
-            
-            <img alt="Image of various fruits" height="100" src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" width="150" />
-            <div class="details">
-                <label for="username">Username</label>
-                <input id="username"  type="text" />
 
-                <label for="quantity">Quantity</label>
-                <input id="quantity"  type="text" />
-
-                <label for="price">Price</label>
-                <input id="price"  type="text" />
-
-                <label for="desciption">Description</label>
-                <input id="desciption" type="text" />
-
-                <button class="btn">
-                    Delete
-                </button>
-                        <br>
-                <button class="btn">
-                   Edit
-                </button>
-                
-            </div>
         </div>
     </div>
-    <footer class="footer">
-        &copy; 2024 Farmers Market.
-    </footer>
+</div>
+<footer class="footer">
+    &copy; 2024 Farmers Market.
+</footer>

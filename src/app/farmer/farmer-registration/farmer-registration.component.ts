@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { HomeNavbarComponent } from "../../home-navbar/home-navbar.component";
 
 
@@ -15,13 +15,13 @@ import { HomeNavbarComponent } from "../../home-navbar/home-navbar.component";
 export class FarmerRegistrationComponent {
 
 
-  constructor(private httpclient:HttpClient){ }
+  constructor(private httpclient:HttpClient,private router:Router){ }
 
   farmer= new FormGroup({  
     firstName: new FormControl(),
      lastName:new FormControl(),
      email:new FormControl(),
-     phone_number : new FormControl(),
+     phone : new FormControl(),
       address : new FormControl(),
       password:new FormControl()
 
@@ -35,6 +35,12 @@ export class FarmerRegistrationComponent {
     console.log(this.farmer.value);
      this.httpclient.post(url,this.farmer.value).subscribe((response:any)=>   {
       console.log(response);
+
+      if(response){
+     this.router.navigate(['/farmerlogin'])
+
+      }
+
     }, error=> {
       console.log("error for adding book" + error);
     })
