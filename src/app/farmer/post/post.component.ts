@@ -13,14 +13,32 @@ import { response } from 'express';
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss'
 })
-export class PostComponent {
+export class PostComponent implements OnInit{
   dbFarmer: any;
   farmerid :any;
 
   constructor(private http:HttpClient,private router:Router,
     private farmerService: FarmerserviceService
   ){  }
+  ngOnInit(): void {
+
+    const sessionurl = 'http://localhost:8080/login/currentFarmer';
+
+    this.http.get(sessionurl).subscribe((response: any) => {
+      console.log("response : " + response);
   
+      if (response) {
+        this.dbFarmer = response;
+        this.farmerid = this.dbFarmer.farmerid;
+  
+        console.log(this.farmerid, " from farmer id ");
+      
+      
+      }})
+
+    
+    
+  }
 
   postproduct=new FormGroup({
     name:new FormControl(),
@@ -31,16 +49,7 @@ export class PostComponent {
   })
 
 handleSubmit() {
-  const sessionurl = 'http://localhost:8080/login/currentFarmer';
-
-  this.http.get(sessionurl).subscribe((response: any) => {
-    console.log("response : " + response);
-
-    if (response) {
-      this.dbFarmer = response;
-      this.farmerid = this.dbFarmer.farmerid;
-
-      console.log(this.farmerid, " from farmer id ");
+  console.log(this.farmerid,"Form handle submit");
 
       const postData = {
         ...this.postproduct.value,
@@ -58,10 +67,10 @@ handleSubmit() {
         if (postResponse) {
           this.router.navigate(['/profile']);
         }
-      });
-    }
-  });
-}
+      })}
+  
+  
+
 reloadPage(){
   window.location.reload();
 }

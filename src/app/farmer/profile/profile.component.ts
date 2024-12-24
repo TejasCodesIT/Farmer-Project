@@ -15,10 +15,27 @@ import { response } from 'express';
 export class ProfileComponent implements OnInit {
 
 
+  dbFarmer:any;
+
   constructor(private http: HttpClient,private router:Router){}
   ngOnInit(): any {
 
+     
+    const sessionurl = 'http://localhost:8080/login/currentFarmer';
 
+    this.http.get(sessionurl).subscribe((response: any) => {
+      console.log("response : " + response);
+  
+      if (response) {
+        this.dbFarmer = response;
+        this.farmerid = this.dbFarmer.farmerid;
+  
+        console.log(this.farmerid, " from farmer id ");
+      
+      
+      }})
+
+      
     this.loadFarmerPost();
     
   }
@@ -50,8 +67,6 @@ deletePost(postid: number) {
                this.router.navigate(['/profile'])
 
    }
-        
-
 
   })
   

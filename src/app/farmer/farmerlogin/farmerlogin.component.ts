@@ -5,7 +5,6 @@ import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LoginNavbarComponent } from "../login-navbar/login-navbar.component";
 import { HomeNavbarComponent } from "../../home-navbar/home-navbar.component";
-import { FarmerserviceService } from '../farmerservice.service';
 
 @Component({
   selector: 'app-farmerlogin',
@@ -17,8 +16,7 @@ export class FarmerloginComponent {
   baseurl = `http://localhost:8080/login`;
   currentFarmer: any;
 
-  constructor(private httpclient: HttpClient, private router: Router,
-    private farmerservice:FarmerserviceService) {}
+  constructor(private httpclient: HttpClient, private router: Router) {}
 
   public loginRequestFarmer: FormGroup = new FormGroup({
     username: new FormControl('', [Validators.required, Validators.email]),
@@ -26,20 +24,25 @@ export class FarmerloginComponent {
   });
 
   public handleSubmitFarmer(): void {
+
+
+    
     console.log(this.loginRequestFarmer.value);
     this.httpclient.post(`${this.baseurl}/farmer`, this.loginRequestFarmer.value).subscribe(
       (response: any) => {
+
+
         console.log('Login successful:', response);
 
       console.log(response)
 
-          this.farmerservice.setCurrentFarmer(response);
-     
+        if(response!=null){
+          this.router.navigate(['/home']);
+        }
 
-        // Save the current farmer in the service
-        //this.currentFarmer.setCurrentFarmer(response);
 
-        this.router.navigate(['/home']);
+
+
       },
       (error) => {
         console.error('Error during login:', error);
