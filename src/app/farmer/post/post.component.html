@@ -1,24 +1,54 @@
 <app-login-navbar></app-login-navbar>
 
-
 <div class="container">
-    <div class="form-container">
-        <div class="image-upload">
-            <img src="Logo.jpg" onerror="this.src='https://user-images.githubusercontent.com/2351721/31314483-7611c488-ac0e-11e7-97d1-3cfc1c79610e.png'" alt="Company Logo" height="200" width="300" />
-<BR>
-            <a onclick="document.getElementById('file-input').click()"  href="">ADD IMAGE</a>
-            <input type="file" id="file-input" style="display: none;" />
+  <div class="form-container">
+
+    <!-- Form for Product -->
+    <div class="form-fields">
+      <form [formGroup]="postproduct" (ngSubmit)="handleSubmit()">
+        <div class="form-group">
+          <input 
+            id="product-name" 
+            placeholder="PRODUCT NAME" 
+            type="text" 
+            formControlName="name" 
+            required />
+          <div *ngIf="postproduct.controls['name'].invalid && postproduct.controls['name'].touched" class="error">
+            Product name is required.
+          </div>
         </div>
-        <div class="form-fields">
-            <input id="product-name" placeholder="PRODUCT NAME" type="text" />
-            <input id="quantity" placeholder="QUANTITY" type="text" />
-            <input id="price" placeholder="PRICE" type="text" />
-            <textarea id="description" placeholder="Add text" rows="4"></textarea>
-            <div class="form-buttons">
-                <a routerLink="/home"><button type="button">POSTS</button></a>
-                
-                <button  >CANCEL</button>
-            </div>
+        
+        <div class="form-group">
+          <input 
+            id="price" 
+            placeholder="PRICE" 
+            type="text" 
+            formControlName="price" 
+            required 
+            pattern="^[0-9]+$" />
+          <div *ngIf="postproduct.controls['price'].invalid && postproduct.controls['price'].touched" class="error">
+            <small *ngIf="postproduct.controls['price'].errors?.['required']">Price is required.</small>
+            <small *ngIf="postproduct.controls['price'].errors?.['pattern']">Price must be a valid number.</small>
+          </div>
         </div>
+        
+        <div class="form-group">
+          <textarea 
+            id="description" 
+            placeholder="Add description" 
+            rows="4" 
+            formControlName="description" 
+            required></textarea>
+          <div *ngIf="postproduct.controls['description'].invalid && postproduct.controls['description'].touched" class="error">
+            Description is required.
+          </div>
+        </div>
+        
+        <div class="form-buttons">
+          <button type="submit"  [disabled]="postproduct.invalid">POST PRODUCT</button>
+          <button type="button" (click)="reloadPage()">CANCEL</button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>

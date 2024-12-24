@@ -42,7 +42,7 @@ export class FarmerRegistrationComponent {
       }
 
     }, error=> {
-      console.log("error for adding book" + error);
+      console.log("error for adding farmer" + error);
     })
 
   }

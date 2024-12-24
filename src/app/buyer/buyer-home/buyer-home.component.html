@@ -4,86 +4,16 @@
 
 
     <section class="products">
-        <!-- Product 1 -->
-        <div class="product">
-            <img src="https://via.placeholder.com/300x200" alt="Fresh Organic Tomatoes">
-            <h2>Fresh Organic Tomatoes</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus asperiores quaerat aliquid ratione
-                voluptatum quae numquam placeat.</p>
-            <p class="price">&#8377; 100</p>
+        <div *ngFor="let post of posts">
 
-        </div>
-
-
-
-         <!-- Product 1 -->
-         <div class="product">
-            <img src="https://via.placeholder.com/300x200" alt="Fresh Organic Tomatoes">
-            <h2>Fresh Organic Tomatoes</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus asperiores quaerat aliquid ratione
-                voluptatum quae numquam placeat.</p>
-            <p class="price">&#8377; 100</p>
-
-        </div>
-
-         <!-- Product 1 -->
-         <div class="product">
-            <img src="https://via.placeholder.com/300x200" alt="Fresh Organic Tomatoes">
-            <h2>Fresh Organic Tomatoes</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus asperiores quaerat aliquid ratione
-                voluptatum quae numquam placeat.</p>
-            <p class="price">&#8377; 100</p>
-
-        </div>
-
-
-
-
-
-         <!-- Product 1 -->
-         <div class="product">
-            <img src="https://via.placeholder.com/300x200" alt="Fresh Organic Tomatoes">
-            <h2>Fresh Organic Tomatoes</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus asperiores quaerat aliquid ratione
-                voluptatum quae numquam placeat.</p>
-            <p class="price">&#8377; 100</p>
-
-        </div>
-
-
-
-
-         <!-- Product 1 -->
-         <div class="product">
-            <img src="https://via.placeholder.com/300x200" alt="Fresh Organic Tomatoes">
-            <h2>Fresh Organic Tomatoes</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus asperiores quaerat aliquid ratione
-                voluptatum quae numquam placeat.</p>
-            <p class="price">&#8377; 100</p>
-
-        </div>
-
-
-         <!-- Product 1 -->
-         <div class="product">
-            <img src="https://via.placeholder.com/300x200" alt="Fresh Organic Tomatoes">
-            <h2>Fresh Organic Tomatoes</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus asperiores quaerat aliquid ratione
-                voluptatum quae numquam placeat.</p>
-            <p class="price">&#8377; 100</p>
-
-        </div>
-
-         <!-- Product 1 -->
-         <div class="product">
-            <img src="https://via.placeholder.com/300x200" alt="Fresh Organic Tomatoes">
-            <h2>Fresh Organic Tomatoes</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus asperiores quaerat aliquid ratione
-                voluptatum quae numquam placeat.</p>
-            <p class="price">&#8377; 100</p>
-
-        </div>
-     
+            <!-- Product 1 -->
+            <div class="product">
+               <img src="https://www.shutterstock.com/shutterstock/photos/2096659114/display_1500/stock-photo-esg-icon-concept-circulating-in-the-hands-of-young-women-for-environment-society-and-governance-sg-2096659114.jpg" alt="Fresh Organic Tomatoes">
+               <h2>{{post.name}}</h2>
+               <p>{{post.description}}</p>
+               <p class="price">&#8377; {{post.price}}</p>
+           </div>
+     </div>
     </section>
 </main>
 

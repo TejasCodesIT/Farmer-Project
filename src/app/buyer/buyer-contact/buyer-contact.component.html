@@ -1,2 +1,40 @@
-
 <app-buyer-navbar></app-buyer-navbar>
+
+<div class="container">
+    <h1>Contact Us</h1>
+    <form [formGroup]="contactUs" (ngSubmit)="onSubmit()">
+      <label for="name">Your Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        placeholder="Enter your name" 
+        formControlName="name">
+      <div *ngIf="contactUs.get('name')?.invalid && contactUs.get('name')?.touched" class="error">
+        Name is required.
+      </div>
+  
+      <label for="email">Your Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        placeholder="Enter your email" 
+        formControlName="email">
+      <div *ngIf="contactUs.get('email')?.invalid && contactUs.get('email')?.touched" class="error">
+        Valid email is required.
+      </div>
+  
+      <label for="message">Message</label>
+      <textarea 
+        id="message" 
+        placeholder="Write your message here" 
+        rows="4" 
+        formControlName="message"></textarea>
+      <div *ngIf="contactUs.get('message')?.invalid && contactUs.get('message')?.touched" class="error">
+        Message is required.
+      </div>
+  
+      <button type="submit" [disabled]="contactUs.invalid">Send Message</button>
+      <p *ngIf="responseMessage" class="success">{{ responseMessage }}</p>
+    </form>
+  </div>
+  

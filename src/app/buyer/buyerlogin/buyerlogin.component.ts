@@ -15,6 +15,9 @@ import { HomeNavbarComponent } from "../../home-navbar/home-navbar.component";
 export class BuyerloginComponent {
 
 
+
+   baseurl = `http://localhost:8080/login`;
+
    constructor(private httpclient: HttpClient, private router: Router) {}
 
 
@@ -25,10 +28,10 @@ export class BuyerloginComponent {
 
 
      handlesubmitBuyer() {
-      const url = 'http://localhost:8080/login/buyer';
+      const url = '/buyer';
   
       console.log(this.loginrequestBuyer.value);
-      this.httpclient.post(url, this.loginrequestBuyer.value).subscribe(
+      this.httpclient.post(`${this.baseurl}/buyer`, this.loginrequestBuyer.value).subscribe(
         (response: any) => {
           console.log(response);
   
@@ -47,5 +50,11 @@ export class BuyerloginComponent {
     reloadPage(): void {
       window.location.reload();
     }
+
+
+
+    // getCurrentBuyer() {
+    //   return this.httpclient.get(`${this.baseUrl}/currentBuyer`, { withCredentials: true });
+    // }
 
 }
