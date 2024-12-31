@@ -1,0 +1,59 @@
+<app-login-navbar></app-login-navbar>
+
+<div class="container">
+  <h1>Add Post</h1>
+  <div class="form-container">
+    <!-- Form for Product -->
+    <div class="form-fields">
+      <form [formGroup]="postproduct" (ngSubmit)="handleSubmit()">
+
+        <!-- Product Name Field -->
+        <div class="form-group">
+          <label for="">product-name</label>
+          <input id="product-name" placeholder="PRODUCT NAME" type="text" formControlName="name" required />
+          <div *ngIf="postproduct.controls['name']?.invalid && postproduct.controls['name']?.touched" class="error">
+            Product name is required.
+          </div>
+        </div>
+        <br>
+        <!-- Price Field -->
+        <div class="PRICE">
+          <label for="">product-price</label>
+          <input id="price" placeholder="PRICE" type="text" formControlName="price" required pattern="^[0-9]+$" />
+          <div *ngIf="postproduct.controls['price']?.invalid && postproduct.controls['price']?.touched" class="error">
+            <small *ngIf="postproduct.controls['price'].errors?.['required']">Price is required.</small>
+            <small *ngIf="postproduct.controls['price'].errors?.['pattern']">Price must be a valid number.</small>
+          </div>
+        </div>
+        <br>
+        <!-- Description Field -->
+        <div class="form-group">
+          <textarea id="description" placeholder="Add description" rows="4" formControlName="description"
+            required></textarea>
+          <div *ngIf="postproduct.controls['description']?.invalid && postproduct.controls['description']?.touched"
+            class="error">
+            Description is required.
+          </div>
+        </div>
+        <br>
+        <!-- Image Upload Section -->
+        <div class="form-group">
+          <label for="product-image">Product Image</label>
+          <input type="file" id="product-image" (change)="onImageSelected($event)" accept="image/*" />
+        </div>
+
+        <!-- Display Selected Image -->
+        <div *ngIf="imagePreview" class="image-preview">
+          <img [src]="imagePreview" alt="Product Image" />
+        </div>
+        <br>
+        <!-- Form Buttons -->
+        <div class="form-buttons">
+          <button type="submit" [disabled]="postproduct.invalid">POST PRODUCT</button>
+          <button type="button" (click)="reloadPage()">CANCEL</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

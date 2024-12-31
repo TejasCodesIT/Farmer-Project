@@ -1,0 +1,93 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(90deg, #74b628, #148f47);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.shape:nth-child(1) {
+  top: -50px;
+  left: -50px;
+}
+
+.shape:nth-child(2) {
+  bottom: -50px;
+  right: -50px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.login-form {
+  background: #fff;
+  padding: 3rem; /* Increased padding for larger form */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 50%; /* Increased form width */
+  text-align: center;
+  z-index: 1; /* Ensure the form is above the background shapes */
+  position: relative; /* Needed to apply z-index correctly */
+}
+
+
+h3 {
+  margin-bottom: 1.5rem; /* Increased margin for better spacing */
+  font-size: 2rem; /* Increased font size for the heading */
+  color: #333;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-top: 1.5rem; /* Increased margin for spacing */
+  font-size: 1rem; /* Increased font size for labels */
+  color: #666;
+}
+
+input {
+  width: 100%;
+  padding: 1rem; /* Increased padding for larger input fields */
+  margin-top: 0.5rem;
+  font-size: 1rem; /* Increased font size for input text */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 2rem; /* Increased margin for spacing */
+  padding: 1rem 2.5rem; /* Increased button padding */
+  background: #0f0f0f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1.1rem; /* Increased font size for button */
+}
+
+button:hover {
+  background: #18dd22;
+}

@@ -1,0 +1,160 @@
+/* Container styles */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for container */
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header style */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Form container styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form group styling for individual input fields */
+.form-group {
+  display: flex;
+  flex-direction: column; /* Stacks input fields vertically */
+  gap: 5px;
+}
+
+/* Label styling */
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input and textarea styling */
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px; /* Font size */
+  width: 100%; /* Full width */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focused state styling for inputs and textareas */
+input:focus,
+textarea:focus {
+  border-color: #5ab80e;
+  box-shadow: 0 0 10px rgba(19, 163, 14, 0.6);
+  outline: none;
+}
+
+/* Prevents textareas from resizing */
+textarea {
+  resize: none;
+}
+
+/* Error message styling */
+.error {
+  color: #ff4d4d;
+  font-size: 12px;
+}
+
+/* Styling for form buttons */
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Button styling */
+button {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Disabled button styling */
+button[disabled] {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Styling for "type=button" buttons */
+button[type="button"] {
+  background: #4caf50;
+}
+
+/* Hover effect for "type=button" buttons */
+button[type="button"]:hover {
+  background: #cc0000;
+}
+
+/* Image preview styling */
+.image-preview {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Image preview styling */
+.image-preview img {
+  max-width: 70%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  transition: transform 0.3s;
+}
+
+/* Hover effect for images */
+.image-preview img:hover {
+  transform: scale(1.05);
+}
+
+/* Ensuring consistent width for the PRICE input (clarification on naming) */
+input.PRICE {
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}

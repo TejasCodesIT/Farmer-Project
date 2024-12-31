@@ -1,0 +1,60 @@
+<app-buyer-navbar></app-buyer-navbar>
+<div class="container">
+    <div class="profile">
+        <h2>BUYER DETAILS</h2>
+    </div>
+        <form [formGroup]="buyer" (ngSubmit)="editBuyer()">
+    <!-- Farmer Information Form -->
+    <div class="form-group">
+        <label for="username">First Name</label>
+        <input placeholder={{dbBuyer.firstName}}  type="text"  formControlName="firstName" />
+    </div>
+
+    <div class="form-group">
+        <label for="username">Last Name</label>
+        <input placeholder={{dbBuyer.lastName}} type="text"  formControlName="lastName" />
+    </div>
+
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input placeholder={{dbBuyer.email}}  type="email"  formControlName="email" />
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone No</label>
+        <input placeholder={{dbBuyer.phone}} type="text"   formControlName="phone" />
+    </div>
+    <div class="form-group">
+        <label for="place">Place</label>
+        <input placeholder={{dbBuyer.address}} type="text"  formControlName="address" />
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="buttons">
+        <button type="submit" (click)="reloadPage()">Edit Profile</button>
+    
+        <button routerLink="/farmer-password">Change Password</button>
+        
+    </div>
+</form>
+    <!-- Farmer's Posts -->
+    <div class="posts">
+        <div *ngFor="let post of posts">
+            <div class="product">
+                    <img 
+                    *ngIf="post.postImages && post.postImages.length > 0" 
+                    [src]="'data:image/jpeg;base64,' + post.postImages[0].picByte" 
+                    alt="{{post.name}}">
+                    <h2>{{post.name}}</h2>
+                    <p>{{post.description}}</p>
+                    <p class="price">&#8377; {{post.price}}</p>
+            
+           </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    &copy; 2024 Farmers Market.
+</footer>

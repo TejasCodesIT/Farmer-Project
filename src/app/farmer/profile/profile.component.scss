@@ -1,0 +1,206 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Profile Section */
+.profile {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.profile h2 {
+  color: #333;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/* Form Styles */
+.form-group {
+  margin: 13px 0;
+  width: 100%;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.form-group input:focus {
+  border-color: #5ab80e;
+  box-shadow: 0 0 10px rgba(19, 163, 14, 0.6);
+  outline: none;
+}
+
+
+/* Button Styles */
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.buttons button {
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #333333;
+}
+
+/* Posts Section */
+.posts {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+  gap: 20px; /* Spacing between products */
+}
+
+/* Product Card Styles */
+/* Product Card Styles */
+.product {
+  background: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensures all cards take equal height */
+  transition: transform 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+.product .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+/* Ensures that product cards align consistently */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Delete Button Style */
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.delete-btn:active {
+  background-color: #a93226;
+  transform: translateY(1px);
+}
+
+.delete-btn:focus {
+  outline: none;
+}
+
+.product-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: #ddd;
+}

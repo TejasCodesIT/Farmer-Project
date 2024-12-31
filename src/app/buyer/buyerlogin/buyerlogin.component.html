@@ -1,0 +1,19 @@
+
+<app-home-navbar></app-home-navbar>
+<!-- Buyer Login Form -->
+<div class="login-container">
+  <form class="login-form" [formGroup]="loginrequestBuyer" (ngSubmit)="handlesubmitBuyer()">
+    <h3>Buyer Login</h3>
+
+    <label for="usernameBuyer">Username</label>
+    <input type="text" placeholder="Email or Phone" id="usernameBuyer" formControlName="username" />
+
+    <label for="passwordBuyer">Password</label>
+    <input type="password" placeholder="Password" id="passwordBuyer" formControlName="password" />
+
+    <button type="submit">Log In</button><br>
+    <!-- <button type="submit" routerLink="/buyer-home">Dumy Login</button><br> -->
+
+    <button routerLink="/buyer" type="button">Register</button>
+  </form>
+</div>

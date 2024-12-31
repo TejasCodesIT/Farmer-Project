@@ -1,0 +1,187 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-container {
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom right, #4caf50, #81c784);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+  font-size: 2.5em;
+}
+
+.hero-section span {
+  color: #fff176;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.vision-section {
+  flex: 1;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.vision-section:hover {
+  transform: translateY(-5px);
+}
+
+/* Team Section */
+.team-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.team-section h2 {
+  font-size: 2em;
+  color: #4caf50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member .card {
+  background: white;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #4caf50;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.card-content .role {
+  color: #4caf50;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* Buttons */
+.contact-btn {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #4caf50, #81c784);
+  color: white;
+  font-size: 1.2em;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(to right, #81c784, #4caf50);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn:active {
+  transform: translateY(1px);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 10px 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-links li:hover .dropdown-menu {
+  display: block;
+}
+
+/* Footer */
+.footer {
+  background: #4caf50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 14px;
+  position: fixed; /* Ensures footer stays at the bottom */
+  bottom: 0;
+  width: 100%; /* Spans across the screen */
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for visual effect */
+}
+
+.footer a {
+  color: white;
+  text-decoration: underline;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer a:hover {
+  color: #ddd;
+}
+

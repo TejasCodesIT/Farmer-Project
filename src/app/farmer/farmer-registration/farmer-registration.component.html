@@ -1,0 +1,65 @@
+<app-home-navbar></app-home-navbar>
+
+<div class="container">
+  <div class="form-box">
+    <h1>Farmer Registration</h1>
+
+    <!-- <img alt="Profile Picture" height="100" type="file"
+      src="https://as1.ftcdn.net/v2/jpg/06/01/36/48/1000_F_601364875_2Vb37iOdF947gddgY9wUkcIzHZp6TxPh.jpg"
+      width="100" /> -->
+    <form [formGroup]="farmer" (ngSubmit)="handleSubmit()">
+
+      <!-- First Name Field -->
+      <label for="firstName">First Name</label>
+      <input id="firstName" placeholder="First Name" type="text" formControlName="firstName" />
+      <div *ngIf="farmer.controls.firstName.invalid && farmer.controls.firstName.touched">
+        <small class="error-text">Does your name have numbers?</small>
+      </div>
+
+      <!-- Last Name Field -->
+      <label for="lastName">Last Name</label>
+      <input id="lastName" placeholder="Last Name" type="text" formControlName="lastName" />
+      <div *ngIf="farmer.controls.lastName.invalid && farmer.controls.lastName.touched">
+        <small class="error-text">Does your name have numbers?</small>
+      </div>
+
+      <!-- Email Field -->
+      <label for="email">Email ID</label>
+      <input id="email" placeholder="Email ID" type="email" formControlName="email" />
+      <div *ngIf="farmer.controls.email.invalid && farmer.controls.email.touched">
+        <small class="error-text">Please enter a valid email address.</small>
+      </div>
+
+      <!-- Phone Field -->
+      <label for="phone">Phone Number</label>
+      <input id="phone" placeholder="Phone Number" type="tel" formControlName="phone" />
+      <div *ngIf="farmer.controls.phone.invalid && farmer.controls.phone.touched">
+        <small class="error-text">Check your number again.</small>
+      </div>
+
+      <!-- Address Field -->
+      <label for="address">Address</label>
+      <input id="address" placeholder="Address" type="text" formControlName="address" />
+      <div *ngIf="farmer.controls.address.invalid && farmer.controls.address.touched">
+        <small class="error-text">Address is required.</small>
+      </div>
+
+      <!-- Password Field -->
+      <label for="address">Password</label>
+      <input id="password" placeholder="Password" type="password" formControlName="password" />
+      <div *ngIf="farmer.controls.password.invalid && farmer.controls.password.touched">
+        <small class="error-text">Password is required.</small>
+      </div>
+
+      <button type="submit" [disabled]="farmer.invalid">Create</button>
+      <button type="button" class="cancel" (click)="reloadPage()">Cancel</button>
+      <a routerLink="/farmerlogin"><button type="button">Login</button></a>
+
+    </form>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2024 Farmers Market.</p>
+</footer>

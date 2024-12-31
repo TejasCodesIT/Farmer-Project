@@ -1,0 +1,43 @@
+<app-buyer-navbar></app-buyer-navbar>
+
+<main class="content">
+
+    <section class="products">
+
+        <div *ngFor="let post of posts">
+
+            <!-- Product -->
+            <div class="product">
+                <!-- Display Post ID -->
+                <p class="post-id">Post ID: {{post.postid}}</p>
+
+                <!-- Display Farmer Name -->
+                <!-- <p class="farmer-name">Farmer Name:{{post.farmerid}} </p> -->
+
+                <!-- Display Farmer Phone Number -->
+                <!-- <p class="farmer-phone">Farmer Phone: </p> -->
+
+                <!-- Product Image -->
+                <img *ngIf="post.postImages && post.postImages.length > 0"
+                    [src]="'data:image/jpeg;base64,' + post.postImages[0].picByte" alt="{{post.name}}">
+
+                <!-- Product Name -->
+                <h2>{{post.name}}</h2>
+
+                <!-- Product Description -->
+                <p>{{post.description}}</p>
+
+                <!-- Product Price -->
+                <p class="price">&#8377; {{post.price}}</p>
+            </div>
+
+        </div>
+
+    </section>
+</main>
+
+
+
+<footer class="footer">
+    &copy; 2024 Farmers Market.
+</footer>

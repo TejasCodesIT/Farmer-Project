@@ -1,0 +1,22 @@
+<nav>
+    <div class="nav-content">
+        <div class="logo">
+            <a href="#">कृषी LINK</a>
+        </div>
+        <ul class="nav-links">
+            <li><a  href="#" aria-label="Go to Home Page">HOME</a></li>
+            <li><a routerLink="/card" href="/register"  (click)="registerfirst()" aria-label="View card">CONTACT</a></li>
+            <li><a routerLink="/profile" href="/about" aria-label="View Profile">ABOUT-US</a></li>
+            
+            <li>
+                <a  aria-label="Dropdown Page" href="#">LOGIN / SIGNUP</a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu">
+                    <li><a routerLink="/farmerlogin" href="/farmerlogin">Farmer Login</a></li>
+                    <li><a routerLink="/buyerlogin" href="/buyerlogin">Buyer Login</a></li>
+                    <li><a routerLink="/register" href="/register" >Register </a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

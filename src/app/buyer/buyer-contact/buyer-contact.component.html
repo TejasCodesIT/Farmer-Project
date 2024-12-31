@@ -1,0 +1,19 @@
+<app-buyer-navbar></app-buyer-navbar>
+
+<div class="container">
+    <h1>Contact Us</h1>
+    <form [formGroup]="contactUs" (ngSubmit)="onSubmit()">
+      <label for="message">Message</label>
+      <textarea 
+        id="message" 
+        placeholder="Write your message here" 
+        rows="4" 
+        formControlName="message"></textarea>
+      <div *ngIf="contactUs.get('message')?.invalid && contactUs.get('message')?.touched" class="error">
+        Message is required.
+      </div> 
+      <button type="submit" [disabled]="contactUs.invalid">Send Message</button>
+      <p *ngIf="responseMessage" class="success">{{ responseMessage }}</p>
+    </form>
+  </div>
+  

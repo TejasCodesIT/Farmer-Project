@@ -1,0 +1,71 @@
+<app-login-navbar></app-login-navbar>
+
+
+
+<div class="container">
+    <div class="profile">
+        <h2>FARMER DETAILS</h2>
+    </div>
+        <form [formGroup]="farmer" (ngSubmit)="editFarmer()">
+    <!-- Farmer Information Form -->
+    <div class="form-group">
+        <label for="username">First Name</label>
+        <input placeholder={{dbFarmer.firstName}}  type="text"  formControlName="firstName" />
+    </div>
+
+    <div class="form-group">
+        <label for="username">Last Name</label>
+        <input placeholder={{dbFarmer.lastName}} type="text"  formControlName="lastName" />
+    </div>
+
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input placeholder={{dbFarmer.email}}  type="email"  formControlName="email" />
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone No</label>
+        <input placeholder={{dbFarmer.phone}} type="text"   formControlName="phone" />
+    </div>
+    <div class="form-group">
+        <label for="place">Place</label>
+        <input placeholder={{dbFarmer.address}} type="text"  formControlName="address" />
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="buttons">
+        <button type="submit" (click)="reloadPage()">Edit Profile</button>
+        <button routerLink="/post">Add a Post</button>
+        <button routerLink="/farmer-password">Change Password</button>
+        <button (click)="reloadPage() "> View Your Products</button>
+    </div>
+</form>
+    <!-- Farmer's Posts -->
+    <div class="posts">
+        <div *ngFor="let post of posts">
+            <div class="product">
+                    <img 
+                    *ngIf="post.postImages && post.postImages.length > 0" 
+                    [src]="'data:image/jpeg;base64,' + post.postImages[0].picByte" 
+                    alt="{{post.name}}">
+                    <h2>{{post.name}}</h2>
+                    <p>{{post.description}}</p>
+                    <p class="price">&#8377; {{post.price}}</p>
+              
+
+               <div class="product-buttons">
+             
+              
+                <button class="delete-btn"  (click)="deletePost(post.postid)">Delete</button>
+            </div>
+
+
+           </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    &copy; 2024 Farmers Market.
+</footer>

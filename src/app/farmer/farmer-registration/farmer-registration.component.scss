@@ -1,0 +1,152 @@
+/* Label */
+.form-box label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+/* Input Field Styling */
+.form-box input {
+  width: 95%;
+  padding: 12px 15px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Focused Input Field */
+.form-box input:focus {
+  border-color: #ff6a00;
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.6);
+}
+
+/* Error Text for Validation */
+.error-text {
+  color: #f44336;
+  font-size: 14px;
+  margin-top: -10px;
+  text-align: left;
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+  background-image: url("https://images.pexels.com/photos/212324/pexels-photo-212324.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Form Box */
+.form-box {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Header */
+.form-box div {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Image */
+.form-box img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px solid #4caf50;
+  transition: transform 0.3s ease;
+}
+
+/* Buttons */
+.form-box button {
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-box button:hover {
+  background-color: #3d8f3f;
+  transform: translateY(-3px);
+}
+
+.form-box button.cancel {
+  background-color: #f44336;
+}
+
+.form-box button.cancel:hover {
+  background-color: #d7352b;
+}
+
+.form-box a button {
+  background-color: #2196f3;
+}
+
+.form-box a button:hover {
+  background-color: #1976d2;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 14px;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
